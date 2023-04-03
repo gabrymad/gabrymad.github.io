@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>My Projects</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <a class="back-arrow" href="index.html"><span>&larr;</span></a>
+        <div class="container-detail">
+            <h1 class="project-title">Anomaly Detection and Localization via Self 
+                Supervised Learning</h1>
+            <div class="project-header">
+                <h4><strong>Master Thesis</strong></h4>
+                <h4>Date: <strong>30/04/2023</strong></h4>
+                <h4>Final score: <strong>102 / 110</strong></h4>
+            </div>
+            <div class="project-detail">
+                <p><strong>Why anomaly detection</strong></p>
+                <p>Quality control is a set of processes to assess the correctness of products along a production chain.
+                    In many industries, quality control is critical, to prevent the release of defective products, detect production problems, reduce wasted resources, and ensure the safety of people.
+                    The importance of quality control increases on large-scale production.<br>
+                    Usually the product is analyzed using sensors or acquisition devices.
+                    In visual inspection, computer vision algorithms are used.<br>
+                    Through quality control it is decided whether or not the product conforms to certain standards.<br>
+                    The discipline that deals with identifying something that does not meet defined standards (or normality) is called Anomaly detection</p>
+                
+                <p><strong>Anomalies</strong></p>
+                <p>Anomalies are observations that do not conform to constraints of normality.
+                    There are different types of anomalies.<br>
+                    Some involve single data, others are composed of groups of items.
+                    Some anomalies are such, depending on the context in which they are studied.
+                    Certain anomalies, on the other hand, affect the semantics of the data itself in a global or local way.</p>
+
+                <p><strong>Visual Anomaly Detection</strong></p>
+                <p>Two types of output can be obtained in Computer Vision: a binary response or an anomaly map.<br>
+                    The first is to determine whether a product is anomalous by referring to an anomaly score.
+                    The anomaly score is a probability value that indicates how anomalous a data item may be.<br>
+                    The second output is to locate the defect by means of an anomaly map
+                    The anomaly map is a grid in which each anomaly score is referenced to a pixel in the image.<br>
+                    Both feedbacks are shown in this thesis.
+                </p>
+                <p><strong>State of the Art Approaches</strong></p>
+                <p>The state of the art presents two main approaches.<br>
+                    One consists of modeling normality and defining a boundary.<br>
+                    The second approach makes use of auxiliary tasks to make the models learn the necessary information.
+                    The learned info is then used in the main task.
+                </p>
+                <p><strong>The project framework</strong></p>
+                <p>In this thesis, approaches are proposed that fall into the second category, based on a self-supervised learning procedure.<br>
+                    An auxiliary task with a synthetic dataset is made use of,where a neural network is trained in classifying normal images from images with artificially synthesized defects.<br>
+                    The network is subsequently tested on images with real defects.<br>
+                    The approach has two modes, Image-level and Patch-level.
+                </p>
+                <p><strong>Artificial dataset</strong></p>
+                <p>Three types of synthetic defects (polygon, rectangle, line) were made. Each defect is generated in
+                    different way. 
+                    The idea is to simulate defects as real as possible. For this reason it is necessary to
+                    first spatially localize the object within the image. Then
+                    one proceeds to paste the synthetic defect into the region corresponding to the object.
+                    To generate a polygon, a rectangle is first constructed whose content can
+                    be a color or a portion of an image. <br>
+                    The dimensions of the rectangle are random. From the perimeter is extracted a set of
+                    points, which will become the set of vertices of the polygon. Finally, the polygon is
+                    combined with the target image by means of a binary mask.<br>
+                    The rectangle is generated similarly to the polygon, but it has smaller dimensions and can
+                    be rotated.<br>
+                    The line is composed of n connected, non-intersecting segments, which simulate the
+                    presence of scratches on the image.
+                </p>
+                <p><strong>Model architecture</strong></p>
+                <p>The model architecture consists of a pre-trained convolutional 
+                    neural network used to extract features from raw images, 
+                    a projection head to refine the features obtained, 
+                    and, depending on the task, a classifier or anomaly detector.<br>
+                    the projection head refines features obtained from several multiple 
+                    convolutional blocks to get global and local information of the 
+                    analyzed image.<br>
+                    Is also made use of a memory bank to keep track of 
+                    the features that constitute normality.
+                </p>
+                <p><strong>Test and Results</strong></p>
+                there are two modes of analysis.<br>
+                The first is to analyze the images globally, 
+                returning a single output.<br>
+                The images are evaluated with the elements in the memory bank.<br>
+                The more similarity the comparison shows, the lower the anomaly score returned.<br>
+                In the second mode, a local-level analysis is done.<br>
+                The test image is decomposed into multiple smaller patches through a sliding window.<br>    
+                For each output (the patches), the similarity with
+                the elements in the memory bank is evaluated, thus obtaining an anomaly map.<br>
+                The proposed methods were evaluated on the MVTec dataset that contains 10 categories of
+                objects and 5 of textures. In this context, the image-level method obtained an
+                AUC of 95% (98% on textures and 92% on objects), while the patch-level approach scored 94% (96% on textures and 92% on objects).
+            </div>
+        </div>
+    </body>
+</html>
