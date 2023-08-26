@@ -1,100 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
-  <head>
-    <title>My projects</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>
+        <title>Index</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="icon" type="image/x-icon" href="/imgs/pear.png">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" type="image/x-icon" href="/images/pear.png" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-
-  <body>
-    <div class="page-header">
-        <h1 class="page__header">Projects Showcase</h1>
-        <p class="page__header__text">A collection of relevant university and personal projects.</p>
-    </div>
-    <div class="main">
-        <div class="grid">
-
-            <!-- PROGETTO TESI MAGISTRALE -->
-            <a class="grid__item" href="master_thesis_detail.html">
-                <div class="card"><img class="card__img" src="imgs/progetto_tesi_preview.png" alt="Hazelnuts">
-                  <div class="card__content">
-                    <h1 class="card__header">Anomaly Detection and Localization via Self Supervised Learning</h1>
-                    <p class="card__text"><strong>Master Thesis</strong></p>
-                    <p class="card__text">University project</p>
-                    <p class="card__text">March 2023</p>
-                    <button class="card__btn">Explore <span>&rarr;</span></button>
-                  </div>
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    </head>
+    <body class="container-fluid">
+        <nav class="navbar bg-body-tertiary rounded border shadow-sm sticky-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand d-flex" href="#">
+                        <img class="m-2" src="/images/pear.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
+                        <span class="align-self-center">Project Showcase</span>
+                    </a>
+                    <button class="navbar-toggler navbar-toggler-icon" data-bs-toggle="collapse" data-bs-target="#menu_collapse">
+                        <div class=""></div>
+                    </button>
                 </div>
-            </a>
-
-            <!-- IOT -->
-            <a class="grid__item" href="iot_monitoring_detail.html">
-              <div class="grid__item">
-                  <div class="card"><img class="card__img" src="imgs/iot_preview.jpeg" alt="iot">
-                  <div class="card__content">
-                      <h1 class="card__header">IoT Monitoring System</h1>
-                      <p class="card__text"><strong>Internet of Things</strong></p>
-                      <p class="card__text">University project</p>
-                      <p class="card__text">June 2022</p>
-                      <button class="card__btn">Explore <span>&rarr;</span></button>
-                  </div>
-                  </div>
-              </div>
-            </a>
-            <!-- AML -->
-            <a class="grid__item" href="aml_detail.html">
-              <div class="grid__item">
-                <div class="card"><img class="card__img" src="imgs/aml_prewview.png" alt="aml">
-                  <div class="card__content">
-                    <h1 class="card__header">Image Auto Orientation</h1>
-                    <p class="card__text"><strong>Advanced Machine Learning</strong></p>
-                    <p class="card__text">University project</p>
-                    <p class="card__text">January 2022</p>
-                    <button class="card__btn">Explore <span>&rarr;</span></button>
-                  </div>
+                <div class="container-fluid justify-content-center">
+                    <div class="mt-2 navbar collapse" id="menu_collapse">
+                        <form class="nav-item">
+                            <div class="input-group">
+                                <input class="form-control" placeholder="Filter projects">
+                                <button class="btn btn-outline-warning" type="reset">Clear</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-              </div>
-            </a>
-            <!-- SISTEMI COMPLESSI -->
-            <div class="grid__item">
-                <div class="card"><img class="card__img" src="imgs/hide_and_seek_preview.jpg" alt="hide_seek">
-                <div class="card__content">
-                    <h1 class="card__header">Hide & Seek via Reinforcement Learning</h1>
-                    <p class="card__text"><strong>Sistemi Complessi e Simulazione</strong></p>
-                    <p class="card__text">University project</p>
-                    <p class="card__text">July 2021</p>
-                    <button class="card__btn">Explore <span>&rarr;</span></button>
-                </div>
+        </nav>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-1 justify-content-center">
+            <!-- thesis card-->
+            <div class="col">
+                <div class="card">
+                    <img src="images\thesis_thumbnail.png" height="200" class="card-img-top object-fit-cover" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">
+                            Anomaly Detection and Localization via Self Supervised Learning
+                        </h5>
+                        <div class="pt-2 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#thesis_collapse">
+                            <span class="text-body-tertiary">
+                                    Computer Vision 💻
+                            </span>
+                            <h6 class="text-body-secondary">
+                                University Project
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                                <div class="dropdown-toggle ms-2 text-secondary">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="thesis_collapse">
+                            <hr class="mt-0">
+                            <p class="card-text text-justify">
+                                
+                                Deep Learning models are used to analyze various products in images 
+                                and classify or localize possible defects.
+                                <br>
+                                Training processin this project is based on SSL.
+                                <br>
+                                Models are trained via proxy tasks, to classify images from an
+                                artificially generated dataset where geometric trasformations are applied to simulate defects.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="card-footer text-center">
+                      <small class="text-body-secondary">March 2023</small>
+                    </div>
                 </div>
             </div>
             
-            <!-- ELABORAZIONE IMMAGINI -->
-            <div class="grid__item">
-              <div class="card"><img class="card__img" src="imgs/elab_preview.png" alt="elab">
-                <div class="card__content">
-                  <h1 class="card__header">Chocolate Boxes Anomaly Detection</h1>
-                  <p class="card__text"><strong>Elaborazione Delle Immagini</strong></p>
-                  <p class="card__text">University project</p>
-                  <p class="card__text"> July 2020</p>
-                  <button class="card__btn">Explore <span>&rarr;</span></button>
+            <!-- iot uni card-->
+            <div class="col">
+                <div class="card">
+                    <img src="images\iot_monitoring_thumbnail.jpg" height="200" class="card-img-top object-fit-cover" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">
+                            IoT Monitoring System
+                        </h5>
+                        
+                        <div class="pt-2 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#iot_uni_collapse">
+                            <span class="text-body-tertiary">
+                                    Internet of Things 🌐
+                            </span>
+                            <h6 class="text-body-secondary">
+                                University Project
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                                <div class="dropdown-toggle ms-2 text-secondary">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="iot_uni_collapse"">
+                            <hr class="mt-0">
+                            <p class="card-text text-justify">
+                                Iot application for monitoring wine production and
+                                storage in a vineyard.
+                                <br>
+                                Microcontrollers such as Arduino and Esp8266 are used to collect sensor readings
+                                (Temperature, humidity, ...).
+                                <br>
+                                Sensor data is sent to a server via MQTT and visualized using a Flask web application.
+                                A SQL database is used to store data.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                      <small class="text-body-secondary">June 2022</small>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-    </div>
-  </body>
+
+            <!-- aml card-->
+            <div class="col">
+                <div class="card">
+                    <img src="images\aml_thumbnail.png" height="200" class="card-img-top object-fit-cover" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">
+                            Image Auto Orientation
+                        </h5>
+                        
+                        <div class="pt-2 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#aml_orientation_collapse">
+                            <span class="text-body-tertiary">
+                                    Computer Vision 💻
+                            </span>
+                            <h6 class="text-body-secondary">
+                                University Project
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                                <div class="dropdown-toggle ms-2 text-secondary">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="aml_orientation_collapse">
+                            <hr class="mt-0">
+                            <p class="card-text text-justify">
+                                A Deep Learning model is trained from scratch to predict and correct rotation
+                                on various contestualized images, such as buildings, mountains, sea,
+                                streets, etc...
+                                <br>
+                                Rotations can be 0, 90, 180 and 270 degrees.
+                                <br>
+                                Models are evaluated using F1-score, precision, recall. Furthermore,
+                                a more in-depth study of network behaviour is conducted to display the image's
+                                portions that most contributed to its classification.
+                                
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                      <small class="text-body-secondary">January 2022</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- rl card-->
+            <div class="col">
+                <div class="card">
+                    <img src="images\hide_and_seek_thumbnail.jpg" height="200" class="card-img-top object-fit-cover" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">
+                            Hide and Seek via Reinforcement Learning
+                        </h5>
+                        
+                        <div class="pt-2 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#rl_collapse">
+                            <span class="text-body-tertiary">
+                                    Deep Learning ⚙
+                            </span>
+                            <h6 class="text-body-secondary">
+                                University Project
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                                <div class="dropdown-toggle ms-2 text-secondary">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="rl_collapse">
+                            <hr class="mt-0">
+                            <p class="card-text text-justify">
+                                Multi agent environment where bots are trained
+                                to play the Hide and Seek game.
+                                <br>
+                                Agents learning method based on an action/reward system,
+                                every action gives a certain reward and the agent must maximize his
+                                final score.
+                                <br>
+                                The game is simulated and visualized via the PyGame python framework.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                      <small class="text-body-secondary">July 2021</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- elab card-->
+            <div class="col">
+                <div class="card">
+                    <img src="images\elab_thumbnail.png" height="200" class="card-img-top object-fit-cover" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">
+                            Chocolate Boxes Quality Control
+                        </h5>
+                        
+                        <div class="pt-2 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#elab_collapse">
+                            <span class="text-body-tertiary">
+                                    Computer Vision 💻
+                            </span>
+                            <h6 class="text-body-secondary">
+                                University Project
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                                <div class="dropdown-toggle ms-2 text-secondary">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="elab_collapse">
+                            <hr class="mt-0">
+                            <p class="card-text text-justify">
+                                A classifier is built to analyze and localize irregularities in
+                                chocolates inside a box.
+                                <br>
+                                No deep learning applied, the classifier performs by defined rules.
+                                <br>
+                                The program isolates the box from the image, do
+                                a perspective correction and proceeds to build a grid to analyze single chocolates. 
+                                <br>
+                                The anomalous chocolates are highlighted with a circle in the input image.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="card-footer text-center">
+                      <small class="text-body-secondary">July 2020</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- iot dev app card-->
+            <div class="col">
+                <div class="card">
+                    <img src="images\iot_dev_app_thumbnail.jpg" height="200" class="card-img-top object-fit-cover" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">
+                            IDeMa
+                        </h5>
+                        
+                        <div class="pt-2 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#iot_dev_app_collapse">
+                            <span class="text-body-tertiary">
+                                Internet of Things 🌐
+                            </span>
+                            <h6 class="text-body-secondary">
+                                Personal Project
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                                <div class="dropdown-toggle ms-2 text-secondary">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="iot_dev_app_collapse">
+                            <hr class="mt-0">
+                            <p class="card-text text-justify">
+                                Iot Device Manager, a Flask web application to monitor microcontrollers connected to a network.
+                                <br>
+                                The application show the device status and the endpoints (sensors) values connected to it.
+                                <br>
+                                Every device collect data via sensors and send it to the application via API. 
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="card-footer text-center">
+                      <small class="text-body-secondary">July 2023</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
 </html>
