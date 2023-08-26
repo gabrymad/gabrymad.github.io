@@ -24,8 +24,8 @@
                         <img class="m-2" src="/images/pear.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
                         <span class="align-self-center">Project Showcase</span>
                     </a>
-                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu_collapse">
-                        <div class="navbar-toggler-icon"></div>
+                    <button class="navbar-toggler navbar-toggler-icon" data-bs-toggle="collapse" data-bs-target="#menu_collapse">
+                        <div class=""></div>
                     </button>
                 </div>
                 <div class="container-fluid justify-content-center">
@@ -39,13 +39,11 @@
                     </div>
                 </div>
         </nav>
-
-        
         <div class="row row-cols-1 row-cols-md-3 g-4 mt-1 justify-content-center">
             <!-- thesis card-->
             <div class="col">
                 <div class="card">
-                    <img src="images\thesis_thumbnail.png" class="card-img-top" alt="...">
+                    <img src="images\thesis_thumbnail.png" height="200" class="card-img-top object-fit-cover" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-center">
                             Anomaly Detection and Localization via Self Supervised Learning
@@ -86,7 +84,7 @@
             <!-- iot uni card-->
             <div class="col">
                 <div class="card">
-                    <img src="images\iot_monitoring_thumbnail.jpg" class="card-img-top" alt="...">
+                    <img src="images\iot_monitoring_thumbnail.jpg" height="200" class="card-img-top object-fit-cover" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-center">
                             IoT Monitoring System
@@ -127,7 +125,7 @@
             <!-- aml card-->
             <div class="col">
                 <div class="card">
-                    <img src="images\aml_thumbnail.png" class="card-img-top" alt="...">
+                    <img src="images\aml_thumbnail.png" height="200" class="card-img-top object-fit-cover" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-center">
                             Image Auto Orientation
@@ -167,10 +165,10 @@
                 </div>
             </div>
 
-            <!-- RL card-->
+            <!-- rl card-->
             <div class="col">
                 <div class="card">
-                    <img src="images\hide_and_seek_thumbnail.jpg" class="card-img-top" alt="...">
+                    <img src="images\hide_and_seek_thumbnail.jpg" height="200" class="card-img-top object-fit-cover" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-center">
                             Hide and Seek via Reinforcement Learning
@@ -207,6 +205,89 @@
                     </div>
                 </div>
             </div>
+
+            <!-- elab card-->
+            <div class="col">
+                <div class="card">
+                    <img src="images\elab_thumbnail.png" height="200" class="card-img-top object-fit-cover" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">
+                            Chocolate Boxes Quality Control
+                        </h5>
+                        
+                        <div class="pt-2 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#elab_collapse">
+                            <span class="text-body-tertiary">
+                                    Computer Vision 💻
+                            </span>
+                            <h6 class="text-body-secondary">
+                                University Project
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                                <div class="dropdown-toggle ms-2 text-secondary">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="elab_collapse">
+                            <hr class="mt-0">
+                            <p class="card-text text-justify">
+                                A classifier is built to analyze and localize irregularities in
+                                chocolates inside a box.
+                                <br>
+                                No deep learning applied, the classifier performs by defined rules.
+                                <br>
+                                The program isolates the box from the image, do
+                                a perspective correction and proceeds to build a grid to analyze single chocolates. 
+                                <br>
+                                The anomalous chocolates are highlighted with a circle in the input image.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="card-footer text-center">
+                      <small class="text-body-secondary">July 2020</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- iot dev app card-->
+            <div class="col">
+                <div class="card">
+                    <img src="images\iot_dev_app_thumbnail.jpg" height="200" class="card-img-top object-fit-cover" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">
+                            IDeMa
+                        </h5>
+                        
+                        <div class="pt-2 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#iot_dev_app_collapse">
+                            <span class="text-body-tertiary">
+                                Internet of Things 🌐
+                            </span>
+                            <h6 class="text-body-secondary">
+                                Personal Project
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                                <div class="dropdown-toggle ms-2 text-secondary">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="iot_dev_app_collapse">
+                            <hr class="mt-0">
+                            <p class="card-text text-justify">
+                                Iot Device Manager, a Flask web application to monitor microcontrollers connected to a network.
+                                <br>
+                                The application show the device status and the endpoints (sensors) values connected to it.
+                                <br>
+                                Every device collect data via sensors and send it to the application via API. 
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="card-footer text-center">
+                      <small class="text-body-secondary">July 2023</small>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </body>
 </html>
